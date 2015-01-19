@@ -3,7 +3,6 @@ package model;
 import exception.DepositBalanceException;
 import exception.DepositDurationException;
 import exception.DepositTypeException;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
@@ -15,7 +14,7 @@ public class Deposit implements Comparable<Deposit> {
     private BigDecimal payedInterest;
     private BigDecimal depositBalance;
     private BigDecimal durationInDays;
-    private BigDecimal customerNumber;
+    private String customerNumber;
     private DepositType depositType;
 
     public BigDecimal getPayedInterest() {
@@ -50,11 +49,11 @@ public class Deposit implements Comparable<Deposit> {
     }
 
 
-    public BigDecimal getCustomerNumber() {
+    public String getCustomerNumber() {
         return customerNumber;
     }
 
-    public void setCustomerNumber(BigDecimal customerNumber) {
+    public void setCustomerNumber(String customerNumber) {
         this.customerNumber = customerNumber;
     }
 

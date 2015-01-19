@@ -2,7 +2,6 @@ package businessLogic;
 
 import exception.DepositBalanceException;
 import exception.DepositDurationException;
-
 import exception.DepositTypeException;
 import model.*;
 import org.xml.sax.Attributes;
@@ -37,7 +36,7 @@ public class SaxHandler extends DefaultHandler {
 
                 //For all other end tags the deposit has to be updated.
             } else if (qName.equals("customerNumber")) {
-                deposit.setCustomerNumber(new BigDecimal(content));
+                deposit.setCustomerNumber(content);
 
             } else if (qName.equals("depositType")) {
 

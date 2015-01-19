@@ -13,8 +13,8 @@
     </deposit>
     <deposit>
         <customerNumber>12348</customerNumber>
-        <depositType>LongTermm</depositType>
-        <depositBalance>879000</depositBalance>
+        <depositType>LongTerm</depositType>
+        <depositBalance>-879000</depositBalance>
         <durationInDays>70</durationInDays>
     </deposit>
     <deposit>

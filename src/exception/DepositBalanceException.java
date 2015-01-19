@@ -8,6 +8,6 @@ public class DepositBalanceException extends Exception {
     public DepositBalanceException(){}
 
     public DepositBalanceException(String s) {
-        super(s);
+        System.out.println(s);
     }
 }

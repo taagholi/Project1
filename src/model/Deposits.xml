@@ -2,8 +2,8 @@
     <deposit>
         <customerNumber>12300</customerNumber>
         <depositType>Qarz</depositType>
-        <depositBalance>200000</depositBalance>
-        <durationInDays>-25</durationInDays>
+        <depositBalance>-200000</depositBalance>
+        <durationInDays>25</durationInDays>
     </deposit>
     <deposit>
         <customerNumber>48483</customerNumber>

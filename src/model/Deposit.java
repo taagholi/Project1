@@ -42,7 +42,7 @@ public class Deposit implements Comparable<Deposit> {
     }
 
     public void setDurationInDays(BigDecimal durationInDays) throws DepositDurationException{
-        if (durationInDays.compareTo(new BigDecimal("0")) == -1) {
+        if (durationInDays.compareTo(BigDecimal.ZERO) < 0) {
             throw new DepositDurationException("Exception In Duration.......!!!!");
         }
         this.durationInDays = durationInDays;

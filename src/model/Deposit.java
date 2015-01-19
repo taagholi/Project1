@@ -34,6 +34,7 @@ public class Deposit implements Comparable<Deposit> {
         if (depositBalance.compareTo(BigDecimal.ZERO) < 0) {
             throw new DepositBalanceException("Exception In Balance.......!!!!");
         }
+
         this.depositBalance = depositBalance;
     }
 

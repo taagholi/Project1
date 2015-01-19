@@ -49,6 +49,7 @@ public class Deposit implements Comparable<Deposit> {
         this.durationInDays = durationInDays;
     }
 
+
     public BigDecimal getCustomerNumber() {
         return customerNumber;
     }

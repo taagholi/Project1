@@ -31,37 +31,39 @@ public class SaxHandler extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName,
                            String qName) {
-        if (qName.equals("deposit")) {
-            deposits.add(deposit);
+        try {
+            if (qName.equals("deposit")) {
+                deposits.add(deposit);
 
-            //For all other end tags the deposit has to be updated.
-        } else if (qName.equals("customerNumber")) {
-            deposit.setCustomerNumber(new BigDecimal(content));
+                //For all other end tags the deposit has to be updated.
+            } else if (qName.equals("customerNumber")) {
+                deposit.setCustomerNumber(new BigDecimal(content));
 
-        } else if (qName.equals("depositType")) {
-            try {
+            } else if (qName.equals("depositType")) {
+
                 deposit.setDepositType(content);
-            } catch (DepositTypeException e) {
-
-            }
 
 
-        } else if (qName.equals("depositBalance")) {
-
-                try {
-                    deposit.setDepositBalance(new BigDecimal(content));
-                } catch (DepositBalanceException e) {
-
-                }
+            } else if (qName.equals("depositBalance")) {
 
 
-        } else if (qName.equals("durationInDays")) {
+                deposit.setDepositBalance(new BigDecimal(content));
 
-            try {
+
+            } else if (qName.equals("durationInDays")) {
+
+
                 deposit.setDurationInDays(new BigDecimal(content));
-            } catch (DepositDurationException e) {
+
 
             }
+        }catch (DepositTypeException e) {
+
+        }
+        catch (DepositBalanceException e) {
+
+        }
+        catch (DepositDurationException e) {
 
         }
     }

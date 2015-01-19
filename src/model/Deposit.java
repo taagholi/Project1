@@ -78,7 +78,7 @@ public class Deposit implements Comparable<Deposit> {
         }  catch (InvocationTargetException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
-            throw new DepositTypeException("Exception In Duration.......!!!!");
+            throw new DepositTypeException("Exception In Type.......!!!!");
         }
     }
 

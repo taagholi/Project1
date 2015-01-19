@@ -2,18 +2,18 @@
     <deposit>
         <customerNumber>12300</customerNumber>
         <depositType>Qarz</depositType>
-        <depositBalance>-200000</depositBalance>
+        <depositBalance>200000</depositBalance>
         <durationInDays>25</durationInDays>
     </deposit>
     <deposit>
         <customerNumber>48483</customerNumber>
-        <depositType>LongTerm</depositType>
+        <depositType>LongTermm</depositType>
         <depositBalance>145000</depositBalance>
         <durationInDays>39</durationInDays>
     </deposit>
     <deposit>
         <customerNumber>12348</customerNumber>
-        <depositType>LongTerm</depositType>
+        <depositType>LongTermm</depositType>
         <depositBalance>879000</depositBalance>
         <durationInDays>70</durationInDays>
     </deposit>

@@ -5,6 +5,7 @@ import model.Deposit;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 /**
@@ -17,9 +18,11 @@ public class WriteToFile {
         try {
             RandomAccessFile randomAccessFile = new RandomAccessFile("results.txt", "rw");
             for (Deposit deposit : deposits){
-                randomAccessFile.writeBytes(deposit.getCustomerNumber()+"#"+deposit.getPayedInterest());
-                String breakLine = "\n";
-                randomAccessFile.writeBytes(breakLine);
+                if (deposit.getPayedInterest().compareTo(new BigDecimal("-1")) == 1) {
+                    randomAccessFile.writeBytes(deposit.getCustomerNumber() + "#" + deposit.getPayedInterest());
+                    String breakLine = "\n";
+                    randomAccessFile.writeBytes(breakLine);
+                }
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

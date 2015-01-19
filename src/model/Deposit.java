@@ -61,10 +61,10 @@ public class Deposit implements Comparable<Deposit> {
         return depositType;
     }
 
-    public void setDepositType(String content) throws DepositTypeException {
+    public void setDepositType(String typeOfDeposit) throws DepositTypeException {
         Object o;
         try {
-            o = Class.forName("model." + content).newInstance();
+            o = Class.forName("model." + typeOfDeposit).newInstance();
             Method method = o.getClass().getDeclaredMethod("setInterestRate");
             method.invoke(o);
             depositType = (DepositType) o;
